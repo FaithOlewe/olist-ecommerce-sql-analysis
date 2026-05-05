@@ -140,7 +140,7 @@ ORDER BY avg_days_to_deliver DESC;
 ```
 ![Q3 Result](Q3%20RESULT.png)
 
- Insight: *(Sellers in CE (Ceará) and MA (Maranhão) have the slowest average delivery times at 17.9 and 17.7 days respectively, and are also among the latest relative to estimates. São Paulo (SP), which handles 78,598 deliveries — the highest volume by far — averages just 12.3 days, highlighting a significant logistics disparity between high-volume and peripheral states.)*
+ Insight: *(Sellers in CE (Ceará) and MA (Maranhão) have the slowest average delivery times at 17.9 and 17.7 days respectively, and are also among the latest relative to estimates. São Paulo (SP), which handles 78,598 deliveries, which is the highest volume by far, averages just 12.3 days, highlighting a significant logistics disparity between high-volume and peripheral states.)*
 
 ---
 
@@ -174,7 +174,7 @@ ORDER BY revenue_rank;
 
 ![Q4 Result](Q4%20RESULT.png)
 
- Insight: *(The top-ranked seller by revenue generated R$225,586 across 1,116 orders with a solid 4.14 review score, showing that high volume and quality can coexist. Notably, seller rank 5 generated R$186,664 but has the lowest review score among the top performers at 3.35 — a flag for the marketplace team to investigate fulfilment or product quality issues.)*
+ Insight: *(The top-ranked seller by revenue generated R$225,586 across 1,116 orders with a solid 4.14 review score, showing that high volume and quality can coexist. Notably, seller rank 5 generated R$186,664 but has the lowest review score among the top performers at 3.35. This is a flag for the marketplace team to investigate fulfilment or product quality issues.)*
 
 ---
 
@@ -203,7 +203,7 @@ ORDER BY order_count;
 
 ![Q5 Result](Q5%20RESULT.png)
 
- Insight: *(97% of customers placed only one order during the entire observation period, with just 2.76% placing two orders and virtually no one placing three or more. This reveals a structural retention problem — Olist's marketplace was almost entirely dependent on acquiring new customers rather than generating repeat business.)*
+ Insight: *(97% of customers placed only one order during the entire observation period, with just 2.76% placing two orders and virtually no one placing three or more. This reveals a structural retention problem. Olist's marketplace was almost entirely dependent on acquiring new customers rather than generating repeat business.)*
 
 ---
 
@@ -262,7 +262,7 @@ ORDER BY cd.cohort_month, cd.month_number;
 
 ![Q6 Cohort Heatmap](Q6%20HEAT%20MAP.png)
 
-Insight: *(Across all monthly cohorts from September 2016 to August 2018, retention drops to below 1% by Month 2 for virtually every cohort. The October 2016 cohort — one of the earliest — shows the highest Month 1 retention at 0.4%, but even this is negligible. The heatmap confirms that one-time purchasing was not a seasonal pattern but a persistent structural characteristic of the platform.)*
+Insight: *(Across all monthly cohorts from September 2016 to August 2018, retention drops to below 1% by Month 2 for virtually every cohort. The October 2016 cohort, which was one of the earliest, shows the highest Month 1 retention at 0.4%, but even this is negligible. The heatmap confirms that one-time purchasing was not a seasonal pattern but a persistent structural characteristic of the platform.)*
 
 ---
 
@@ -299,7 +299,7 @@ ORDER BY revenue DESC;
 
 ![Q7 Result](Q7%20RESULT.png)
 
-Insight: *(The top 7 categories account for 50% of total revenue, and the top 14 categories account for 75% — indicating a moderately diversified product mix rather than a pure 80/20 concentration. Health & Beauty alone contributes 9.5% of all revenue, making it the single most critical category to protect and grow.)*
+Insight: *(The top 7 categories account for 50% of total revenue, and the top 14 categories account for 75%. This indicates a moderately diversified product mix rather than a pure 80/20 concentration. Health & Beauty alone contributes 9.5% of all revenue, making it the single most critical category to protect and grow.)*
 
 ---
 
@@ -340,14 +340,13 @@ ORDER BY delivery_bucket;
 
 ![Q8 Result](Q8%20RESULT.png)
 
-Insight: *(The data shows a stark and direct relationship between delivery speed and customer satisfaction. Orders delivered more than 7 days early average a 4.32 review score with 83.5% positive reviews, while very late orders (7+ days past estimate) average just 1.73 with only 12.6% positive reviews — a 2.5x difference in satisfaction. On-time delivery is clearly the single most controllable driver of customer experience on this platform.)*
+Insight: *(The data shows a stark and direct relationship between delivery speed and customer satisfaction. Orders delivered more than 7 days early average a 4.32 review score with 83.5% positive reviews, while very late orders (7+ days past estimate) average just 1.73 with only 12.6% positive reviews, reflecting a 2.5x difference in satisfaction. On-time delivery is clearly the single most controllable driver of customer experience on this platform.)*
 
 ---
 
 ### Q9 — Which payment methods are most popular, and do they correlate with order value?
 
 **Business context:** Payment mix informs checkout UX decisions and instalment financing strategy.
-
 ```sql
 SELECT
     payment_type,
@@ -417,16 +416,16 @@ ORDER BY rfm_total DESC;
 
 ![Q10 Result](Q10%20RESULT.png)
 
-Insight: *(The RFM model scored 93,357 customers across 94 pages of results. The top segment shown — Champions — are customers with high recency, frequency and monetary scores (all 5s, rfm_total of 15), though the dataset's low repeat purchase rate confirmed by Q5 means true Champions are rare. The majority of the customer base falls into lower RFM tiers, reinforcing that Olist's retention challenge is platform-wide rather than isolated to specific segments)*
+Insight: *(The RFM model scored 93,357 customers across 94 pages of results. The top segment shown, Champions, are customers with high recency, frequency and monetary scores (all 5s, rfm_total of 15), though the dataset's low repeat purchase rate confirmed by Q5 means true Champions are rare. The majority of the customer base falls into lower RFM tiers, reinforcing that Olist's retention challenge is platform-wide rather than isolated to specific segments)*
 
 ---
 
 ##  Key Findings Summary
 
 1. **Revenue seasonality:** *(Revenue grew 24x from October 2016 to mid-2018, with a clear Black Friday spike in November 2017 (+54% MoM) confirming seasonal demand patterns.)*
-2. **Category concentration:** *(The top 7 categories drive 50% of total revenue, led by Health & Beauty — a moderately diversified mix, but one where losing the top 3 categories would eliminate over a quarter of the business.)*
+2. **Category concentration:** *(The top 7 categories drive 50% of total revenue, led by Health & Beauty, a moderately diversified mix, but one where losing the top 3 categories would eliminate over a quarter of the business.)*
 3. **Retention crisis:** *(97% of customers never returned after their first purchase. Month-2 retention across all cohorts sits below 1%, indicating the platform was structurally acquisition-dependent throughout its entire observed history.)*
-4. **Delivery drives satisfaction:** *(Very late deliveries score 1.73 on average vs 4.32 for early deliveries — a 2.5x gap. Improving logistics in slow states like CE and MA is the clearest lever available to improve NPS.)*
+4. **Delivery drives satisfaction:** *(Very late deliveries score 1.73 on average vs 4.32 for early deliveries which is a 2.5x gap. Improving logistics in slow states like CE and MA is the clearest lever available to improve NPS.)*
 5. **Payment behaviour:** *(Credit card with instalments accounts for 78% of revenue at an average of 3.5 instalments per order, confirming that instalment financing is not optional but central to how Brazilian consumers shop online.)*
 
 ---
