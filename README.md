@@ -1,4 +1,4 @@
-#  E-Commerce Customer Analytics — SQL Portfolio Project
+#  E-Commerce Customer Analytics - SQL Portfolio Project
 
 **Author:** Faith Olewe &nbsp;|&nbsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-Faith%20Olewe-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/faith-olewe/)
 
@@ -6,7 +6,7 @@
 
 ##  Project Overview
 
-This project uses the **Olist Brazilian E-Commerce Dataset** (100,000+ real orders, 2016–2018) to answer 10 business questions using SQL — progressing from basic aggregations to window functions, cohort analysis, and RFM customer segmentation. The goal was to demonstrate my ability to translate business questions into SQL queries and extract actionable insights from a relational database.
+This project uses the **Olist Brazilian E-Commerce Dataset** (100,000+ real orders, 2016–2018) to answer 10 business questions using SQL, progressing from basic aggregations to window functions, cohort analysis, and RFM customer segmentation. The goal was to demonstrate my ability to translate business questions into SQL queries and extract actionable insights from a relational database.
 
 **Tools:** PostgreSQL 18 · pgAdmin 4  
 **Dataset:** [Olist Brazilian E-Commerce — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)  
@@ -113,7 +113,7 @@ LIMIT 15;
 
 ### Q3 — What is the average delivery time, and how does it vary by seller state?
 
-**Business context:** Logistics performance varies by region — identifying laggards helps prioritise fulfilment improvements.
+**Business context:** Logistics performance varies by region. Hence, identifying laggards helps prioritise fulfilment improvements.
 
 ```sql
 SELECT
@@ -268,7 +268,7 @@ Insight: *(Across all monthly cohorts from September 2016 to August 2018, retent
 
 ### Q7 — Running total of revenue and cumulative share by category (Pareto analysis)
 
-**Business context:** Identify whether revenue follows the 80/20 rule — a few categories driving most of the business.
+**Business context:** Identify whether revenue follows the 80/20 rule and acknowledging a few categories driving most of the business.
 
 ```sql
 WITH category_revenue AS (
