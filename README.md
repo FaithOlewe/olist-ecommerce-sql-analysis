@@ -73,7 +73,6 @@ FROM monthly
 ORDER BY month;
 ```
 
-![Q1 Query](Q1%20QUERY.png)
 ![Q1 Result](Q1%20RESULT.png)
 ![Q1 Line Chart](Q1%20LINE%20CHART.png)
 
@@ -105,7 +104,6 @@ ORDER BY total_revenue DESC
 LIMIT 15;
 ```
 
-![Q2 Query](Q2%20QUERY.png)
 ![Q2 Result](Q2%20RESULT.png)
 ![Q2 Bar Chart](Q2%20BAR%20CHART.png)
 
@@ -140,8 +138,6 @@ GROUP BY s.seller_state
 HAVING COUNT(o.order_id) > 50
 ORDER BY avg_days_to_deliver DESC;
 ```
-
-![Q3 Query](Q3%20QUERY.png)
 ![Q3 Result](Q3%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Sellers in northern states average 21 days to deliver vs 8 days for São Paulo-based sellers, a 2.6x difference.")*
@@ -176,7 +172,6 @@ WHERE revenue_rank <= 20 OR worst_score_rank <= 10
 ORDER BY revenue_rank;
 ```
 
-![Q4 Query](Q4%20QUERY.png)
 ![Q4 Result](Q4%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Two sellers appear in both the top 20 by revenue and bottom 10 by review score — high volume but poor customer experience.")*
@@ -206,7 +201,6 @@ GROUP BY order_count
 ORDER BY order_count;
 ```
 
-![Q5 Query](Q5%20QUERY.png)
 ![Q5 Result](Q5%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "97% of customers placed only one order, suggesting retention is a critical weakness for Olist's marketplace model.")*
@@ -262,8 +256,6 @@ JOIN cohort_sizes cs ON cd.cohort_month = cs.cohort_month
 ORDER BY cd.cohort_month, cd.month_number;
 ```
 
-![Q6 Query Part A](Q6%20a%20QUERY.png)
-![Q6 Query Part B](Q6%20b%20QUERY.png)
 ![Q6 Result](Q6%20RESULT.png)
 
 **Cohort Retention Heatmap:**
@@ -305,7 +297,6 @@ FROM category_revenue
 ORDER BY revenue DESC;
 ```
 
-![Q7 Query](Q7%20QUERY.png)
 ![Q7 Result](Q7%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "The top 10 categories account for 68% of total revenue — a moderate concentration suggesting a relatively diversified product mix.")*
@@ -347,8 +338,6 @@ GROUP BY delivery_bucket
 ORDER BY delivery_bucket;
 ```
 
-![Q8 Query Part A](Q8%20a%20QUERY.png)
-![Q8 Query Part B](Q8%20b%20QUERY.png)
 ![Q8 Result](Q8%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Orders delivered 7+ days late average a 2.1 review score vs 4.3 for early deliveries — delivery speed is the single strongest driver of customer satisfaction.")*
@@ -376,7 +365,6 @@ GROUP BY payment_type
 ORDER BY total_revenue DESC;
 ```
 
-![Q9 Query](Q9%20QUERY.png)
 ![Q9 Result](Q9%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Credit card accounts for 74% of revenue with an average of 3.7 instalments, suggesting Brazilian shoppers heavily rely on instalment financing.")*
@@ -427,8 +415,6 @@ FROM rfm_scored
 ORDER BY rfm_total DESC;
 ```
 
-![Q10 Query Part A](Q10%20a%20QUERY.png)
-![Q10 Query Part B](Q10%20b%20QUERY.png)
 ![Q10 Result](Q10%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Less than 1% of customers qualify as Champions or Loyal — the vast majority fall into Lost or Occasional, reinforcing the retention opportunity identified throughout this analysis.")*
