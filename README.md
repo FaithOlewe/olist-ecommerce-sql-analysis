@@ -6,7 +6,7 @@
 
 ##  Project Overview
 
-This project uses the **Olist Brazilian E-Commerce Dataset** (100,000+ real orders, 2016–2018) to answer 10 business questions using SQL — progressing from basic aggregations to window functions, cohort analysis, and RFM customer segmentation. The goal was to demonstrate the ability to translate business questions into SQL queries and extract actionable insights from a relational database.
+This project uses the **Olist Brazilian E-Commerce Dataset** (100,000+ real orders, 2016–2018) to answer 10 business questions using SQL — progressing from basic aggregations to window functions, cohort analysis, and RFM customer segmentation. The goal was to demonstrate my ability to translate business questions into SQL queries and extract actionable insights from a relational database.
 
 **Tools:** PostgreSQL 18 · pgAdmin 4  
 **Dataset:** [Olist Brazilian E-Commerce — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)  
