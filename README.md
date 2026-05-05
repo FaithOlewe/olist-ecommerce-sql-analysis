@@ -35,11 +35,11 @@ sellers ────┘         │                └──▶ sellers
 
 Before answering business questions, the dataset was audited to understand row counts, date range, order status distribution, and null values in key columns.
 
-![Part A Query](images/PART%20A%20QUERY.png)
-![Part A Result](images/PART%20A%20RESULT.png)
-![Part B — Date Range](images/PART%20B.png)
-![Part C — Order Status Breakdown](images/PART%20C.png)
-![Part D — Null Audit](images/PART%20D.png)
+![Part A Query](PART%20A%20QUERY.png)
+![Part A Result](PART%20A%20RESULT.png)
+![Part B — Date Range](PART%20B.png)
+![Part C — Order Status Breakdown](PART%20C.png)
+![Part D — Null Audit](PART%20D.png)
 
 ---
 
@@ -73,9 +73,9 @@ FROM monthly
 ORDER BY month;
 ```
 
-![Q1 Query](images/Q1%20QUERY.png)
-![Q1 Result](images/Q1%20RESULT.png)
-![Q1 Line Chart](images/Q1%20LINE%20CHART.png)
+![Q1 Query](Q1%20QUERY.png)
+![Q1 Result](Q1%20RESULT.png)
+![Q1 Line Chart](Q1%20LINE%20CHART.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Revenue peaked in November 2017 with 27% MoM growth, consistent with Black Friday activity.")*
 
@@ -105,9 +105,9 @@ ORDER BY total_revenue DESC
 LIMIT 15;
 ```
 
-![Q2 Query](images/Q2%20QUERY.png)
-![Q2 Result](images/Q2%20RESULT.png)
-![Q2 Bar Chart](images/Q2%20BAR%20CHART.png)
+![Q2 Query](Q2%20QUERY.png)
+![Q2 Result](Q2%20RESULT.png)
+![Q2 Bar Chart](Q2%20BAR%20CHART.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Health & Beauty is the top revenue category but ranks only 8th in review score, suggesting a quality or expectation gap.")*
 
@@ -141,8 +141,8 @@ HAVING COUNT(o.order_id) > 50
 ORDER BY avg_days_to_deliver DESC;
 ```
 
-![Q3 Query](images/Q3%20QUERY.png)
-![Q3 Result](images/Q3%20RESULT.png)
+![Q3 Query](Q3%20QUERY.png)
+![Q3 Result](Q3%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Sellers in northern states average 21 days to deliver vs 8 days for São Paulo-based sellers, a 2.6x difference.")*
 
@@ -176,8 +176,8 @@ WHERE revenue_rank <= 20 OR worst_score_rank <= 10
 ORDER BY revenue_rank;
 ```
 
-![Q4 Query](images/Q4%20QUERY.png)
-![Q4 Result](images/Q4%20RESULT.png)
+![Q4 Query](Q4%20QUERY.png)
+![Q4 Result](Q4%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Two sellers appear in both the top 20 by revenue and bottom 10 by review score — high volume but poor customer experience.")*
 
@@ -206,8 +206,8 @@ GROUP BY order_count
 ORDER BY order_count;
 ```
 
-![Q5 Query](images/Q5%20QUERY.png)
-![Q5 Result](images/Q5%20RESULT.png)
+![Q5 Query](Q5%20QUERY.png)
+![Q5 Result](Q5%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "97% of customers placed only one order, suggesting retention is a critical weakness for Olist's marketplace model.")*
 
@@ -262,13 +262,13 @@ JOIN cohort_sizes cs ON cd.cohort_month = cs.cohort_month
 ORDER BY cd.cohort_month, cd.month_number;
 ```
 
-![Q6 Query Part A](images/Q6%20a%20QUERY.png)
-![Q6 Query Part B](images/Q6%20b%20QUERY.png)
-![Q6 Result](images/Q6%20RESULT.png)
+![Q6 Query Part A](Q6%20a%20QUERY.png)
+![Q6 Query Part B](Q6%20b%20QUERY.png)
+![Q6 Result](Q6%20RESULT.png)
 
 **Cohort Retention Heatmap:**
 
-![Q6 Cohort Heatmap](images/Q6%20HEAT%20MAP.png)
+![Q6 Cohort Heatmap](Q6%20HEAT%20MAP.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Month-1 retention averages below 1% across all cohorts, indicating that repeat purchasing was structurally absent from Olist's marketplace throughout the observed period.")*
 
@@ -305,8 +305,8 @@ FROM category_revenue
 ORDER BY revenue DESC;
 ```
 
-![Q7 Query](images/Q7%20QUERY.png)
-![Q7 Result](images/Q7%20RESULT.png)
+![Q7 Query](Q7%20QUERY.png)
+![Q7 Result](Q7%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "The top 10 categories account for 68% of total revenue — a moderate concentration suggesting a relatively diversified product mix.")*
 
@@ -347,9 +347,9 @@ GROUP BY delivery_bucket
 ORDER BY delivery_bucket;
 ```
 
-![Q8 Query Part A](images/Q8%20a%20QUERY.png)
-![Q8 Query Part B](images/Q8%20b%20QUERY.png)
-![Q8 Result](images/Q8%20RESULT.png)
+![Q8 Query Part A](Q8%20a%20QUERY.png)
+![Q8 Query Part B](Q8%20b%20QUERY.png)
+![Q8 Result](Q8%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Orders delivered 7+ days late average a 2.1 review score vs 4.3 for early deliveries — delivery speed is the single strongest driver of customer satisfaction.")*
 
@@ -376,8 +376,8 @@ GROUP BY payment_type
 ORDER BY total_revenue DESC;
 ```
 
-![Q9 Query](images/Q9%20QUERY.png)
-![Q9 Result](images/Q9%20RESULT.png)
+![Q9 Query](Q9%20QUERY.png)
+![Q9 Result](Q9%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Credit card accounts for 74% of revenue with an average of 3.7 instalments, suggesting Brazilian shoppers heavily rely on instalment financing.")*
 
@@ -427,9 +427,9 @@ FROM rfm_scored
 ORDER BY rfm_total DESC;
 ```
 
-![Q10 Query Part A](images/Q10%20a%20QUERY.png)
-![Q10 Query Part B](images/Q10%20b%20QUERY.png)
-![Q10 Result](images/Q10%20RESULT.png)
+![Q10 Query Part A](Q10%20a%20QUERY.png)
+![Q10 Query Part B](Q10%20b%20QUERY.png)
+![Q10 Result](Q10%20RESULT.png)
 
 **💡 Insight:** *(Replace with your finding — e.g. "Less than 1% of customers qualify as Champions or Loyal — the vast majority fall into Lost or Occasional, reinforcing the retention opportunity identified throughout this analysis.")*
 
@@ -455,27 +455,6 @@ ORDER BY rfm_total DESC;
 3. Run `setup.sql` to create all 8 tables and indexes
 4. Import each CSV using pgAdmin's Import/Export tool (Format: CSV, Header: ON, Encoding: UTF8)
 5. Run queries from the `queries/` folder in order
-
-**Folder structure:**
-```
-olist-sql-project/
-├── README.md
-├── setup.sql
-├── images/                        ← all screenshots go here
-├── queries/
-│   ├── q01_monthly_revenue.sql
-│   ├── q02_category_revenue.sql
-│   ├── q03_delivery_by_state.sql
-│   ├── q04_seller_scorecard.sql
-│   ├── q05_repeat_purchases.sql
-│   ├── q06_cohort_retention.sql
-│   ├── q07_pareto_analysis.sql
-│   ├── q08_delivery_vs_reviews.sql
-│   ├── q09_payment_methods.sql
-│   └── q10_rfm_segmentation.sql
-└── outputs/
-    └── Q6 HEAT MAP.png
-```
 
 ---
 
